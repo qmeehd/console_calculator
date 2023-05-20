@@ -18,10 +18,10 @@ namespace Testing
                 // USER INPUTTED NUMBER IS STORED INTO NUM1 VAR
                 Console.WriteLine("\nPlease enter the first number: ");
                 string input1 = Console.ReadLine();
-                int num1;
+                double num1;
 
                 // CHECKING IF 
-                bool isValid1 = int.TryParse(input1, out num1);
+                bool isValid1 = double.TryParse(input1, out num1);
                 if (!isValid1)
                 {
                     Console.WriteLine("Invalid input for the first number. Please try again.");
@@ -31,9 +31,9 @@ namespace Testing
 
                 Console.WriteLine("Enter the second number: ");
                 string input2 = Console.ReadLine();
-                int num2;
+                double num2;
 
-                bool isValid2 = int.TryParse(input2, out num2);
+                bool isValid2 = double.TryParse(input2, out num2); 
                 if (!isValid2)
                 {
                     Console.WriteLine("Invalid input for the second number. Please try again.");
@@ -42,8 +42,10 @@ namespace Testing
                 //USER SELECTS ORDER OF OPERATIONS
                 Console.WriteLine("Select your choice: a/s/m/d (Addition, Subtraction, Multiplication, Divison)");
                 string response = Console.ReadLine();
+
                 //SET RESULT VAR TO 0
-                int result = 0;
+                double result = 0;
+
                 //EVALUATE EACH CASE IF CONDITION IS MET AND SET RESULT(VAR) TO THE RESULT.
                 switch (response)
                 {
@@ -77,9 +79,11 @@ namespace Testing
                 }
                 // PRINTS RESULT
                 Console.WriteLine($"\nThe answer is {result}.");
+
                 // ASK USER IF THEY WOULD LIKE TO REPEAT PROGRAM
                 Console.WriteLine("Would you like to restart?");
                 string restartApp = Console.ReadLine();
+
                 //USE OF .ToLower TO MAKE CASE-INSENSITIVE
                 restart = (restartApp.ToLower() == "yes");
             } 
