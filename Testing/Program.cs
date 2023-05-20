@@ -64,7 +64,7 @@ namespace Testing
                     return;
 
             }
-            // PRINTS 
+            // PRINTS RESULT
             Console.WriteLine($"\nThe answer is {result}.");
         }
     }
